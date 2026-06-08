@@ -262,3 +262,6 @@ async def content_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 await context.bot.copy_message(chat_id=u_id, from_chat_id=update.message.chat_id, message_id=update.message.message_id)
                 s += 1
             except Exceptio
+            except Exception as e:
+    f += 1
+    logging.error(f"Broadcast failed for {u_id}: {e}")
